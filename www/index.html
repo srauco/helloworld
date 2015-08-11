@@ -14,7 +14,10 @@
 <script>
 
 $('#silly').click(function() {
-	SILLY.DoIt($('#results'));
+	$.get('http://www.magicchristmaslights.com/ajaxresult.asp', function(data){
+		$('#results').html(data);
+	})
+	//SILLY.DoIt($('#results'));
 });
 
 $('#clear').click(function() {
